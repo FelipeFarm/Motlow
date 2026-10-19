@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Motlow Pro Media</title>
+<meta name="description" content="Guides for marketing teams on corporate video, event production, interviews and year-round content planning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Josefin+Sans:wght@600;700&amp;display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0E0B13;color:#F5F2FA;font-family:Inter,sans-serif;font-size:17px;line-height:1.55}
+a{color:#C4A6FF}a:hover{color:#E2D4FF}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
+.band{background:#17121F}
+.sec{padding-top:104px;padding-bottom:104px}
+.top{position:relative;overflow:hidden;background:#0E0B13}
+.bg{position:absolute;inset:0;background-size:cover;background-position:50% 50%;opacity:.15;pointer-events:none}
+.rel{position:relative}
+header.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px}
+.logo{text-decoration:none;color:#F5F2FA;display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:28px;letter-spacing:.02em}
+.logo span{font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:.32em;color:#C4A6FF;margin-top:4px}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px}
+nav.main a{color:#DCD5E8;text-decoration:none}
+nav.main a.cur{color:#F5F2FA;font-weight:700;border-bottom:2px solid #7C3AED;padding-bottom:2px}
+.btn{display:inline-block;background:#7C3AED;color:#fff!important;text-decoration:none;font-weight:700;padding:18px 32px;border-radius:10px;font-size:18px}
+.btn:hover{background:#6D28D9}
+.btn-sm{padding:12px 20px;font-size:15px}
+.btn-ghost{display:inline-block;border:1px solid #C4A6FF;color:#F5F2FA;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:10px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C4A6FF}
+h1{margin:0;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:clamp(40px,5vw,62px);line-height:1.06;letter-spacing:-.01em}
+h2{margin:0;font-weight:700;font-size:clamp(30px,3.4vw,40px);line-height:1.1}
+h3{margin:0;font-weight:700;font-size:21px;line-height:1.3}
+p{margin:0}
+.lead{font-size:20px;color:#DCD5E8;max-width:36em}
+.muted{color:#DCD5E8}
+.dim{color:#B9B0C8;font-size:15px}
+.stack{display:flex;flex-direction:column;gap:20px}
+.row{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.col{flex:1 1 440px;min-width:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
+.card{background:#0E0B13;border:1px solid #3A2F4A;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.band .card{background:#0E0B13}
+.card .body{padding:28px;display:flex;flex-direction:column;gap:12px;flex-grow:1}
+.card.lead-card{border-color:#7C3AED}
+.ph{object-fit:cover;width:100%;aspect-ratio:16/10}
+.photo{border-radius:16px;border:1px solid #3A2F4A;object-fit:cover;width:100%}
+.ph-box{background:#1B1524;border:1px solid #3A2F4A;border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#B9B0C8;padding:24px}
+.num{display:flex;gap:16px;align-items:baseline}
+.num b{color:#C4A6FF}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px}
+.step{display:flex;flex-direction:column;gap:10px;border-top:2px solid #3A2F4A;padding-top:20px}
+.step.on{border-top-color:#7C3AED}
+.step .when{font-weight:700;font-size:15px;color:#C4A6FF}
+.faq{border-bottom:1px solid #3A2F4A;padding:22px 0;display:flex;flex-direction:column;gap:6px}
+.faq b{font-size:19px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C4A6FF;border:1px solid #3A2F4A;border-radius:999px;padding:5px 12px}
+.check li{margin-bottom:10px}
+ul.check{margin:0;padding-left:20px;color:#DCD5E8}
+footer.site{border-top:1px solid #3A2F4A}
+.foot{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;padding-top:56px;padding-bottom:32px}
+.foot a{color:#DCD5E8;text-decoration:none}
+.fcol{display:flex;flex-direction:column;gap:10px;font-size:15px}
+.legal{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:14px;color:#B9B0C8;border-top:1px solid #3A2F4A;padding-top:20px;padding-bottom:32px}
+table.plan{width:100%;border-collapse:collapse}
+table.plan td,table.plan th{border-bottom:1px solid #3A2F4A;padding:18px 12px;text-align:left;vertical-align:top}
+table.plan th{color:#C4A6FF;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:767px){.sec{padding-top:72px;padding-bottom:72px}nav.main{gap:16px}}
+
+.post-card{text-decoration:none;color:#F5F2FA}
+.post-card:hover h3{color:#C4A6FF}
+.post-card .ph{aspect-ratio:16/9}
+.meta{font-size:14px;color:#B9B0C8}
+.prose{font-size:18px;line-height:1.75;color:#DCD5E8}
+.prose h2{font-size:30px;color:#F5F2FA;margin:48px 0 16px}
+.prose h3{font-size:22px;color:#F5F2FA;margin:36px 0 12px}
+.prose p{margin:0 0 20px}
+.prose ul,.prose ol{margin:0 0 20px;padding-left:24px}
+.prose li{margin-bottom:8px}
+.prose strong{color:#F5F2FA}
+.prose a{color:#C4A6FF}
+.prose blockquote{margin:28px 0;padding:0 0 0 20px;border-left:3px solid #7C3AED;color:#F5F2FA;font-size:20px}
+.prose img{border-radius:12px;margin:24px 0}
+.aside{position:sticky;top:24px;background:#17121F;border:1px solid #3A2F4A;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+<div class="top">
+<div class="bg" aria-hidden="true" style="background-image:url('https://cdn.prod.website-files.com/6870c86602734cd83a07217e/69615e53ac17e5a6f40c4eba_c61802aab386d1719a2fe2a3433b699e_motlowhardrock-13.webp');background-position:50% 40%"></div>
+<header class="wrap nav rel">
+<a href="index.html" class="logo" aria-label="Motlow Pro Media home"><img src="images/motlow-logo-white.webp" alt="Motlow Pro Media" width="150" style="width:150px;height:auto;display:block"></a>
+<nav class="main" aria-label="Main"><a href="content-partnership.html">90-Day Partnership</a><a href="services.html">Services</a><a href="casino-resort-video-production.html">Casinos &amp; Resorts</a><a href="portfolio.html">Portfolio</a><a href="blog.html" class="cur">Blog</a><a href="contact-us.html" class="btn btn-sm">Book a free call</a></nav>
+</header>
+<section class="wrap rel stack" style="padding-top:56px;padding-bottom:72px;gap:20px">
+<div class="eyebrow">Blog</div>
+<h1>Video ideas for marketing teams</h1>
+<p class="lead">Practical guides on planning shoots, events and content that keeps working after the cameras stop.</p>
+<div class="chips"><span class="tag">All</span><span class="tag" style="color:#B9B0C8">Events &amp; conferences</span><span class="tag" style="color:#B9B0C8">Interviews</span><span class="tag" style="color:#B9B0C8">Content strategy</span><span class="tag" style="color:#B9B0C8">Venues &amp; hospitality</span></div>
+</section>
+</div>
+<section class="wrap sec stack" style="padding-top:56px;gap:48px">
+<a href="blog-post.html" class="card post-card" style="flex-direction:row;flex-wrap:wrap">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abfbe26a7e28fbc9e749fa8_ChatGPT%20Image%20Oct%202%2C%202026%20at%2010_22_23%20AM.png" alt="" style="flex:3 1 520px;min-width:0;aspect-ratio:16/9;object-fit:cover" loading="lazy">
+<div class="body" style="flex:2 1 320px;justify-content:center;padding:36px"><span class="tag" style="align-self:flex-start">Latest</span>
+<div class="meta">October 19, 2026</div><h3 style="font-size:30px;line-height:1.2">What to Capture at Your First Corporate Event of the Year</h3>
+<p class="muted">This guide explains why the first corporate event of the year content matters and how companies can plan video, photography, event, and content assets that support real business use.</p><span style="font-weight:700;color:#C4A6FF">Read the article →</span></div></a>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))"><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abfbdaa712cb79b948cbc89_ChatGPT%20Image%20Oct%202%2C%202026%20at%2010_20_21%20AM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">How to Turn Year-End Reports Into Video Content</h3>
+<p class="muted" style="font-size:16px">This guide explains why year-end report video content matters and how companies can plan video, photography, event, and content assets that support real business use.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abfbd22fa0db2e32cad3fb8_ChatGPT%20Image%20Oct%202%2C%202026%20at%2010_18_04%20AM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">Why Every Corporate Event Needs a Pre-Production Media Plan</h3>
+<p class="muted" style="font-size:16px">This guide explains why pre-production media plan matters and how companies can plan video, photography, event, and content assets that support real business use.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abad20c2d0deb19a30b4c10_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_45_57%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">Corporate Brand Videos vs Recruiting Videos: Which Should Come First?</h3>
+<p class="muted" style="font-size:16px">This guide helps marketing teams decide whether to produce a corporate brand video or recruiting video first, and how both assets can work together over time.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abad0ecf0d004d1f46db5d8_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_41_10%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">Creating Customer Testimonial Videos That Build Trust</h3>
+<p class="muted" style="font-size:16px">This guide explains how marketing teams can plan, film, and use customer testimonial videos that feel credible instead of scripted.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abad08e9ec4dcaac57e28ba_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_39_32%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">Why Audio Quality Can Make or Break Corporate Videos</h3>
+<p class="muted" style="font-size:16px">This guide explains why audio matters in corporate video production, what can go wrong, and how marketing teams can plan for cleaner sound before filming begins.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abacfdda7309a5a1f1d5a6c_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_36_38%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">What Makes an Executive Interview Look Professional</h3>
+<p class="muted" style="font-size:16px">This guide explains the visual, technical, and strategic details that make executive interviews look polished, credible, and ready for corporate marketing use.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abacf88557eb5a7613593e8_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_35_14%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">Conference Video Mistakes That Cost Marketing Teams Valuable Content</h3>
+<p class="muted" style="font-size:16px">This guide explains the conference video planning mistakes that reduce content value and how marketing teams can capture stronger assets before, during, and after the event.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abacefb779258c3474af7b5_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_32_53%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">Behind the Scenes of a Successful Corporate Event Production</h3>
+<p class="muted" style="font-size:16px">This guide explains the planning, people, equipment, communication, and production details that help corporate events run smoothly from start to finish.</p></div></a><a href="blog-post.html" class="card post-card">
+<img src="https://cdn.prod.website-files.com/6879de477ee0a73601943726/6abace48dbec9b81003bad95_ChatGPT%20Image%20Sep%2028%2C%202026%20at%2004_27_52%20PM.png" alt="" class="ph" loading="lazy">
+<div class="body"><div class="meta">October 19, 2026</div><h3 style="font-size:20px">How to Prepare Executive Speakers for On-Camera Interviews</h3>
+<p class="muted" style="font-size:16px">This guide explains how marketing teams can prepare executive speakers for polished, confident, and useful on-camera interviews.</p></div></a></div>
+<div style="display:flex;justify-content:center;gap:12px;align-items:center" class="meta">
+<span class="tag">1</span><span class="tag" style="color:#B9B0C8">2</span><span class="tag" style="color:#B9B0C8">3</span><span>Next →</span></div>
+</section>
+<section class="band"><div class="wrap sec row">
+<div class="col stack"><div class="eyebrow">Stop doing one-off shoots</div><h2>Turn these ideas into a 90-day content plan</h2>
+<p class="muted">The 90-Day Content Partnership plans, films and edits your content in one flat package.</p>
+<a href="content-partnership.html" class="btn-ghost" style="align-self:flex-start">See how the partnership works</a></div>
+<div class="col"><img src="https://cdn.prod.website-files.com/6870c86602734cd83a07217e/696165574b0877dd9e56e2bc_Afrojack_YvonneGougelet_%40yvonnegphotos_106.webp" alt="The Motlow Pro Media team standing together under blue event lighting" class="photo" style="aspect-ratio:16/10" loading="lazy"></div>
+</div></section><footer class="site">
+<div class="wrap foot">
+<div class="fcol" style="max-width:320px;gap:14px">
+<a href="index.html" class="logo" aria-label="Motlow Pro Media home"><img src="images/motlow-logo-white.webp" alt="Motlow Pro Media" width="130" style="width:130px;height:auto;display:block"></a>
+<div class="dim">Video production and content strategy for Florida casino, resort and hospitality marketing teams.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:48px">
+<div class="fcol"><div style="font-weight:700">Explore</div>
+<a href="content-partnership.html">90-Day Partnership</a><a href="services.html">Services</a><a href="casino-resort-video-production.html">Casinos &amp; Resorts</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="contact-us.html">Contact</a></div>
+<div class="fcol"><div style="font-weight:700">Contact</div>
+<a href="mailto:info@motlowpromedia.com">info@motlowpromedia.com</a><span style="color:#DCD5E8">Tampa, FL · Serving all of Florida</span><span style="color:#B9B0C8">[Instagram · LinkedIn · X]</span></div>
+</div>
+</div>
+<div class="wrap legal"><div>© 2026 Motlow Pro Media is operated by Motlow Production Inc · Tampa, FL</div>
+<div style="display:flex;gap:20px"><a href="https://www.motlowpromedia.com/privacy-policy">Privacy policy</a><a href="https://www.motlowpromedia.com/terms-and-conditions">Terms</a></div></div>
+</footer>
+</body>
+</html>
